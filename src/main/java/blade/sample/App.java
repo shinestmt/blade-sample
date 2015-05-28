@@ -13,13 +13,11 @@ public class App implements BladeApplication{
 	@Override
 	public void init() {
 		
-		// 设置路由所在包
-		Blade.routes("blade.sample.route");
+		// 设置路由、拦截器包所在包
+		Blade.defaultRoute("blade.sample");
 		
-		// 设置拦截器包
-		Blade.interceptor("blade.sample.interceptor");
-		
-		
+		// 设置要扫描的ioc包，可选
+		Blade.ioc("blade.sample.service.*");
 	}
 	
 }

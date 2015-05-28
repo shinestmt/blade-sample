@@ -6,7 +6,7 @@
 	<display-name>Archetype Created Web Application</display-name>
 	<filter>
 		<filter-name>BladeFilter</filter-name>
-		<filter-class>com.blade.BladeFilter</filter-class>
+		<filter-class>blade.BladeFilter</filter-class>
 		<init-param>
 			<param-name>applicationClass</param-name>
 			<param-value>blade.sample.App</param-value>

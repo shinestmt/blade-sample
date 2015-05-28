@@ -1,19 +1,26 @@
 package blade.sample.route;
 
-import blade.ModelAndView;
+import blade.annotation.Inject;
 import blade.annotation.Path;
 import blade.annotation.Route;
+import blade.render.ModelAndView;
 import blade.render.R;
 import blade.route.HttpMethod;
+import blade.sample.service.UserService;
 import blade.wrapper.Request;
 import blade.wrapper.Response;
 
 @Path("/index")
 public class Hello {
 	
+	@Inject
+	UserService userService;
+	
 	@Route("/hello")
 	public String hello() {
 		System.out.println("hello");
+		userService.sayHello();
+		
 		return R.render("hello.jsp");
 	}
 	
@@ -41,7 +48,7 @@ public class Hello {
 	public void index() {
 		ModelAndView modelAndView = new ModelAndView("/index.jsp");
 		modelAndView.add("name", "jack");
-		
+		R.render(modelAndView);
 	}
 	
 }

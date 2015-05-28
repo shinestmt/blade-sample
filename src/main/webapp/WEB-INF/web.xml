@@ -9,7 +9,7 @@
 		<filter-class>com.blade.BladeFilter</filter-class>
 		<init-param>
 			<param-name>applicationClass</param-name>
-			<param-value>com.helloworld.App</param-value>
+			<param-value>blade.sample.App</param-value>
 		</init-param>
 	</filter>
 	

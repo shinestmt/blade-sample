@@ -1,14 +1,14 @@
 package blade.sample.route;
 
-import com.blade.ModelAndView;
-import com.blade.annotation.Controller;
-import com.blade.annotation.Route;
-import com.blade.render.R;
-import com.blade.route.HttpMethod;
-import com.blade.wrapper.Request;
-import com.blade.wrapper.Response;
+import blade.ModelAndView;
+import blade.annotation.Path;
+import blade.annotation.Route;
+import blade.render.R;
+import blade.route.HttpMethod;
+import blade.wrapper.Request;
+import blade.wrapper.Response;
 
-@Controller("/index")
+@Path("/index")
 public class Hello {
 	
 	@Route("/hello")

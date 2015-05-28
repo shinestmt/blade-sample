@@ -1,14 +1,14 @@
 package blade.sample.interceptor;
 
-import com.blade.annotation.After;
-import com.blade.annotation.Before;
-import com.blade.annotation.Interceptor;
-import com.blade.wrapper.Request;
+import blade.annotation.After;
+import blade.annotation.Before;
+import blade.annotation.Interceptor;
+import blade.wrapper.Request;
 
 @Interceptor
 public class BaseInterceptor {
 	
-	@Before("/qqq/*")
+	@Before("/*")
 	public void baseLanJie(){
 		System.out.println("before...");
 	}

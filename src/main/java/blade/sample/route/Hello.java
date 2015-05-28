@@ -10,7 +10,7 @@ import blade.sample.service.UserService;
 import blade.wrapper.Request;
 import blade.wrapper.Response;
 
-@Path("/index")
+@Path
 public class Hello {
 	
 	@Inject
@@ -38,8 +38,6 @@ public class Hello {
 	public void users(Request request, Response response) {
 		System.out.println("users");
 		String name = request.pathParam(":name");
-//		ModelAndView modelAndView = new ModelAndView("/users.jsp");
-//		modelAndView.add("name", name);
 		request.attribute("name", name);
 		R.render("/users.jsp");
 	}
@@ -49,6 +47,14 @@ public class Hello {
 		ModelAndView modelAndView = new ModelAndView("/index.jsp");
 		modelAndView.add("name", "jack");
 		R.render(modelAndView);
+	}
+	
+	
+	@Route("/you/:username")
+	public String you(Request request) {
+		ModelAndView modelAndView = new ModelAndView("/you.html");
+		modelAndView.add("username", request.pathParam(":username"));
+		return R.render(modelAndView);
 	}
 	
 }

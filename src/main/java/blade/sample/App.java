@@ -5,7 +5,8 @@ import org.apache.log4j.Logger;
 
 import blade.Blade;
 import blade.BladeApplication;
-import blade.render.VelocityRender;
+import blade.render.JetbrickRender;
+import blade.server.BladeServer;
 
 public class App implements BladeApplication{
 
@@ -20,9 +21,13 @@ public class App implements BladeApplication{
 		// 设置要扫描的ioc包，可选
 		Blade.ioc("blade.sample.service.*");
 		
-		Blade.viewPath("/WEB-INF/views/");
+		Blade.view("/WEB-INF/views/", ".jsp");
 		
-		Blade.viewEngin(new VelocityRender());
+//		Blade.viewEngin(new VelocityRender());
+		Blade.viewEngin(new JetbrickRender());
 	}
 	
+	public static void main(String[] args) {
+		BladeServer.run(9000);
+	}
 }

@@ -7,6 +7,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>blade-sample Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>4.11</junit.version>
+		<servlet.version>3.0.1</servlet.version>
+		<jetty.version>9.0.2.v20130417</jetty.version>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -17,17 +27,32 @@
 		<dependency>
 			<groupId>com.bladejava</groupId>
 			<artifactId>blade</artifactId>
-			<version>1.0.0</version>
+			<version>1.0</version>
 		</dependency>
+		<!-- <dependency> <groupId>com.bladejava</groupId> <artifactId>blade-render-velocity</artifactId> 
+			<version>1.0</version> </dependency> -->
 		<dependency>
 			<groupId>com.bladejava</groupId>
-			<artifactId>blade-render-velocity</artifactId>
+			<artifactId>blade-render-jetbrick</artifactId>
 			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.12</version>
+		</dependency>
+		<!-- jetty -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>${jetty.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>${jetty.version}</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>

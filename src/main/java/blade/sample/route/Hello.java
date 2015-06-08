@@ -21,12 +21,17 @@ public class Hello {
 		System.out.println("hello");
 		userService.sayHello();
 		
-		return R.render("hello.jsp");
+		return R.render("hello");
 	}
 	
 	@Route(value = "/post", method = HttpMethod.POST)
 	public void post() {
 		System.out.println("post");
+	}
+	
+	@Route(value = "/post", method = HttpMethod.POST)
+	public String test() {
+		return "test.jsp";
 	}
 	
 	@Route("/rock/:id")

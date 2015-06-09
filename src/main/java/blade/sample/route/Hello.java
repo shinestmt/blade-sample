@@ -4,7 +4,6 @@ import blade.annotation.Inject;
 import blade.annotation.Path;
 import blade.annotation.Route;
 import blade.render.ModelAndView;
-import blade.render.R;
 import blade.route.HttpMethod;
 import blade.sample.service.UserService;
 import blade.wrapper.Request;
@@ -17,11 +16,11 @@ public class Hello {
 	UserService userService;
 	
 	@Route("/hello")
-	public String hello() {
+	public void hello(Response response) {
 		System.out.println("hello");
 		userService.sayHello();
 		
-		return R.render("hello");
+		response.render("hello");
 	}
 	
 	@Route(value = "/post", method = HttpMethod.POST)
@@ -44,22 +43,22 @@ public class Hello {
 		System.out.println("users");
 		String name = request.pathParam(":name");
 		request.attribute("name", name);
-		R.render("/users.jsp");
+		response.render("/users.jsp");
 	}
 
 	@Route("/index")
-	public void index() {
+	public void index(Response response) {
 		ModelAndView modelAndView = new ModelAndView("/index.jsp");
 		modelAndView.add("name", "jack");
-		R.render(modelAndView);
+		response.render(modelAndView);
 	}
 	
 	
 	@Route("/you/:username")
-	public String you(Request request) {
+	public void you(Request request, Response response) {
 		ModelAndView modelAndView = new ModelAndView("/you.html");
 		modelAndView.add("username", request.pathParam(":username"));
-		return R.render(modelAndView);
+		response.render(modelAndView);
 	}
 	
 }

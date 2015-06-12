@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 import blade.Blade;
 import blade.BladeApplication;
 import blade.render.VelocityRender;
-import blade.server.BladeServer;
 
 public class App implements BladeApplication{
 
@@ -27,9 +26,10 @@ public class App implements BladeApplication{
 //		Blade.viewEngin(new JetbrickRender());
 		
 		Blade.staticFolder("/static");
+		
 	}
 	
 	public static void main(String[] args) {
-		BladeServer.run(9000);
+		Blade.run(9000);
 	}
 }

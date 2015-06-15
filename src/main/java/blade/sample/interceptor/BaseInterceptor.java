@@ -3,7 +3,7 @@ package blade.sample.interceptor;
 import blade.annotation.After;
 import blade.annotation.Before;
 import blade.annotation.Interceptor;
-import blade.wrapper.Request;
+import blade.http.Request;
 
 @Interceptor
 public class BaseInterceptor {

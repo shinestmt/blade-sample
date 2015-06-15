@@ -30,6 +30,6 @@ public class App implements BladeApplication{
 	}
 	
 	public static void main(String[] args) {
-		Blade.run(9000);
+		Blade.run(App.class, 9000);
 	}
 }

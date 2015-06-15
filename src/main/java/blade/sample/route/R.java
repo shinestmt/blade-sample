@@ -2,8 +2,8 @@ package blade.sample.route;
 
 import blade.annotation.Path;
 import blade.annotation.Route;
+import blade.http.Response;
 import blade.render.ModelAndView;
-import blade.wrapper.Response;
 
 @Path
 public class R {

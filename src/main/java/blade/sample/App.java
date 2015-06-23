@@ -7,7 +7,7 @@ import blade.Blade;
 import blade.BladeApplication;
 import blade.render.VelocityRender;
 
-public class App implements BladeApplication{
+public class App extends BladeApplication{
 
 	Logger logger = Logger.getLogger(App.class);
 	

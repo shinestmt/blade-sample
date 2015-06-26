@@ -27,12 +27,12 @@
 		<dependency>
 			<groupId>com.bladejava</groupId>
 			<artifactId>blade</artifactId>
-			<version>1.0.7</version>
+			<version>1.1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.bladejava</groupId>
-			<artifactId>blade-render-velocity</artifactId>
-			<version>1.0.1</version>
+			<artifactId>blade-velocity</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>

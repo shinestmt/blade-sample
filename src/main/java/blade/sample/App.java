@@ -17,6 +17,10 @@ public class App extends BladeApplication{
 		// 设置路由、拦截器包所在包
 		Blade.defaultRoute("blade.sample");
 		
+		Blade.routes("blade.sample.route");
+		
+		Blade.interceptor("blade.sample.interceptor");
+		
 		// 设置要扫描的ioc包，可选
 		Blade.ioc("blade.sample.service.*");
 		

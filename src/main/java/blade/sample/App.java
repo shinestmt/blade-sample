@@ -1,10 +1,9 @@
 package blade.sample;
 
 
-import org.apache.log4j.Logger;
-
 import blade.Blade;
 import blade.BladeApplication;
+import blade.kit.log.Logger;
 import blade.render.VelocityRender;
 
 public class App extends BladeApplication{
@@ -16,7 +15,7 @@ public class App extends BladeApplication{
 		
 		// 设置路由、拦截器包所在包
 		Blade.defaultRoute("blade.sample");
-		
+			
 		Blade.routes("blade.sample.route");
 		
 		Blade.interceptor("blade.sample.interceptor");

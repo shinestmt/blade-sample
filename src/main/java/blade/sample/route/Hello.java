@@ -28,7 +28,7 @@ public class Hello {
 		System.out.println("post");
 	}
 	
-	@Route(value = "/post", method = HttpMethod.POST)
+	@Route(value = "/test", method = HttpMethod.GET)
 	public String test() {
 		return "test.jsp";
 	}
@@ -56,7 +56,7 @@ public class Hello {
 	
 	@Route("/you/:username")
 	public void you(Request request, Response response) {
-		ModelAndView modelAndView = new ModelAndView("/you.html");
+		ModelAndView modelAndView = new ModelAndView("/you.jsp");
 		modelAndView.add("username", request.pathParam(":username"));
 		response.render(modelAndView);
 	}

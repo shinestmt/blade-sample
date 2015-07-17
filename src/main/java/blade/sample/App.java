@@ -4,7 +4,7 @@ package blade.sample;
 import blade.Blade;
 import blade.BladeApplication;
 import blade.kit.log.Logger;
-import blade.render.VelocityRender;
+import blade.render.JspRender;
 
 public class App extends BladeApplication{
 
@@ -25,7 +25,7 @@ public class App extends BladeApplication{
 		
 		Blade.view("/WEB-INF/views/", ".jsp");
 		
-		Blade.viewEngin(new VelocityRender());
+		Blade.viewEngin(JspRender.single());
 //		Blade.viewEngin(new JetbrickRender());
 		
 		Blade.staticFolder("/static");
